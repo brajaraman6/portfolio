@@ -54,9 +54,12 @@ section h2 {
 
 .project-card img {
   width: 100%;
+  height: auto;      /* prevents stretching */
   border-radius: 6px;
   margin-bottom: 0.5rem;
+  object-fit: cover; /* optional: crops instead of distorting */
 }
+
 
 .project-card h3 {
   margin: 0.5rem 0;
