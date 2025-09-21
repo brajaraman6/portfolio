@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth; /* enables smooth scrolling */
+}
+
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
@@ -12,12 +16,43 @@ body {
   background: #f9f9f9;
 }
 
+/* ====== Navigation Bar ====== */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #004466;
+  padding: 0.8rem 0;
+  z-index: 1000;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+nav li {
+  margin: 0 1rem;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
 /* ====== Header ====== */
 header {
   background: #004466;
   color: #fff;
-  padding: 3rem 1rem;
+  padding: 6rem 1rem 3rem 1rem;
   text-align: center;
+  margin-top: 3rem; /* space below fixed navbar */
 }
 
 header h1 {
@@ -54,9 +89,12 @@ section h2 {
 
 .project-card img {
   width: 100%;
+  height: auto;      /* prevents stretching */
   border-radius: 6px;
   margin-bottom: 0.5rem;
+  object-fit: cover; /* optional: crops instead of distorting */
 }
+
 
 .project-card h3 {
   margin: 0.5rem 0;
