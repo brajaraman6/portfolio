@@ -43,6 +43,13 @@ section h2 {
   display: inline-block;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;   /* removes extra spacing */
+}
+
+
 /* ====== Project Cards ====== */
 .project-card {
   background: #fff;
